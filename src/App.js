@@ -1,28 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
+import TodoList from "./components/TodoList/TodoListContainer";
+import Registration from './components/Sign/Registration/RegistrationContainer';
+import Login from './components/Sign/Login/LoginContainer';
+import UserProfile from './components/UserProfile/UserProfileContainer';
+import Home from './components/Home/Home';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+const app = () => (
+    <div className='сontainer'>
+      <Switch>
+          <PrivateRoute path="/todo" component={TodoList} />
+          <PrivateRoute path="/user-profile" component={UserProfile} />
+          <Route path="/registration" component={Registration} />
+          <Route path="/login" component={Login} />
+          <Route path="/" exact component={Home} />
+          <Redirect to='/'/>
+      </Switch>
+    </div>
+);
 
-export default App;
+export default withRouter(app);

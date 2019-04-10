@@ -1,0 +1,50 @@
+.todolist {
+  max-width: 600px;
+  margin: 15px auto;
+  li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 0 11px 8px #e5cfb9;
+    .item {
+      width: 65%;
+      margin-right: 5px;
+      word-wrap: break-word;
+      .title {
+        margin-bottom: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        color: #222233;
+      }
+      .description {
+        text-align: left;
+      }
+    }
+    .editInputs {
+      input {
+        display: block;
+        margin-bottom: 5px;
+        padding: 3px;
+        border: 2px solid #e5cfb9;
+        font-size: 15px;
+        background-color: #f2ebe3;
+      }
+    }
+    .itemButtons button {
+      margin: 0 0 0 3px;
+      padding: 5px;
+      font-size: 15px;
+      background-color: #f4ebe6;
+      border: 2px solid #e5cfb9;
+    }
+  }
+}
+
+.checked {
+  text-decoration: line-through;
+}

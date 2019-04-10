@@ -1,0 +1,18 @@
+.filterButtons {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+  button {
+    margin-right: 5px;
+    padding: 10px 15px;
+    background-color: #d6b98f;
+    color: #222233;
+    border: 1px solid #222233;
+    text-transform: uppercase;
+  }
+  .active {
+    background-color: #eae2da;
+    color: #222233;
+    border: 1px solid #222233;
+  }
+}
